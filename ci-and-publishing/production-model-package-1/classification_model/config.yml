@@ -1,0 +1,105 @@
+# Package Overview
+package_name: classification_model
+
+# Data Files
+training_data_file: adult-training.csv
+test_data_file: adult-test.csv
+
+# Variables
+# The variable we are attempting to predict (sale price)
+target: Income
+
+pipeline_name_1: classification_model_1
+pipeline_name_2: classification_model_2
+pipeline_save_file: classification_model_output_v
+
+variables_to_rename:
+  Hours/Week: HoursPerWeek
+
+features:
+  - Workclass
+  - Education
+  - Education_num
+  - Marital_Status
+  - Occupation
+  - Relationship
+  - Race
+  - Sex
+  - Native_country
+  - Age
+  - fnlgwt
+  - Capital_Gain
+  - Capital_Loss
+  - HoursPerWeek
+
+# set train/test split
+test_size: 0.2
+
+# to set the random seed
+random_state: 0
+
+max_depth: 2
+
+n_estimators: 1000
+
+learning_rate: 0.0599
+
+drop_threshold: 0.8
+
+# categorical variables with NA in train set
+categorical_vars_with_na_frequent:
+  - Native_country
+
+categorical_vars_with_na_missing:
+  - Workclass
+  - Occupation
+
+#numerical_vars_with_na:
+#  - LotFrontage
+
+categorical_vars:
+  - Workclass
+  - Education
+  - Marital_Status
+  - Occupation
+  - Relationship
+  - Race
+  - Sex
+  - Native_country
+
+columns_after_one_hot:
+  - Age
+  - fnlgwt
+  - Education_num
+  - Capital_Gain
+  - Capital_Loss
+  - HoursPerWeek
+  - Workclass_Rare
+  - Workclass_Self-emp-not-inc
+  - Workclass_Private
+  - Workclass_Local-gov
+  - Education_Bachelors
+  - Education_HS-grad
+  - Education_Rare
+  - Education_Masters
+  - Marital_Status_Never-married
+  - Marital_Status_Married-civ-spouse
+  - Marital_Status_Divorced
+  - Occupation_Adm-clerical
+  - Occupation_Exec-managerial
+  - Occupation_Rare
+  - Occupation_Prof-specialty
+  - Occupation_Other-service
+  - Occupation_Sales
+  - Occupation_Craft-repair
+  - Occupation_Machine-op-inspct
+  - Relationship_Not-in-family
+  - Relationship_Husband
+  - Relationship_Rare
+  - Relationship_Own-child
+  - Race_White
+  - Race_Black
+  - Sex_Male
+  - Native_country_United-States
+
+
