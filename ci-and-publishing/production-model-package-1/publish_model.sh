@@ -21,10 +21,11 @@ die() {
     exit 1
 }
 
-
+echo "printing $BASE_DIR"
 build() {
-#    DIR="${1/%\//}"
-    DIR="${}"
+    #DIR="${1/%\//}"
+    #DIR="${}"
+    DIR="."
     echo "Checking directory $DIR"
     cd "$BASE_DIR/$DIR"
     [ ! -e $SETUP ] && warn "No $SETUP file, skipping" && return
