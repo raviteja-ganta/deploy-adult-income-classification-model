@@ -62,10 +62,10 @@ jobs:
 #          name: Fetch the data
 #          command: |
 #            tox -e fetch_data
-      - run:
-          name: Test the model
-          command: |
-            tox
+#      - run:
+#          name: Test the model
+#          command: |
+#            tox
       - run:
           name: Publish model to Gemfury
           command: |
