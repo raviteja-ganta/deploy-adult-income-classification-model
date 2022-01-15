@@ -8,7 +8,7 @@ from setuptools import find_packages, setup
 # Package meta-data.
 NAME = 'Adult-income-classification-model'
 DESCRIPTION = "Example classification model package."
-URL = "https://github.com/raviteja-ganta/deploying-adult-income-classification-model"
+URL = "https://github.com/raviteja-ganta/deploy-adult-income-classification-model"
 EMAIL = "ravitejareddy.ganta@gmail.com"
 AUTHOR = "RavitejaGanta"
 REQUIRES_PYTHON = ">=3.6.0"
