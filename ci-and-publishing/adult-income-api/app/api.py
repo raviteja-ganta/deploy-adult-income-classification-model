@@ -10,13 +10,13 @@ from classification_model import __version__ as model_version
 from classification_model.predict import make_prediction
 
 from app import __version__, schemas
+# from app import __version__, schemas.health
 from app.config import settings
 
 api_router = APIRouter()
 
 
-#@api_router.get("/health", response_model=schemas.Health, status_code=200)
-@api_router.get("/health", response_model=schemas.health.Health, status_code=200)
+@api_router.get("/health", response_model=schemas.Health, status_code=200)
 def health() -> dict:
     """
     Root Get
