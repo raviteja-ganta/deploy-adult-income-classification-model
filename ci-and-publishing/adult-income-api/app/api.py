@@ -10,6 +10,7 @@ from classification_model import __version__ as model_version
 from classification_model.predict import make_prediction
 
 from app import __version__, schemas
+# from app import __version__, schemas.health
 from app.config import settings
 
 api_router = APIRouter()
