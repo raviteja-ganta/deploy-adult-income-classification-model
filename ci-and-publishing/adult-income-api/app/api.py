@@ -14,7 +14,7 @@ from app.config import settings
 
 api_router = APIRouter()
 
-
+print('i am here above')
 @api_router.get("/health", response_model=schemas.Health, status_code=200)
 def health() -> dict:
     """
